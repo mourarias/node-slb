@@ -1,0 +1,32 @@
+{
+  "name": "slb",
+  "version": "1.0.0",
+  "description": "A simple leaderboard using Rocksdb, with a use case",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon test"
+  },
+  "keywords": [
+    "leaderboard",
+    "rocksdb",
+    "express"
+  ],
+  "author": "mourarias",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.4.2",
+    "express": "^4.14.0",
+    "level": "^1.4.0",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mourarias/node-slb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mourarias/node-slb/issues"
+  },
+  "homepage": "https://github.com/mourarias/node-slb#readme"
+}
