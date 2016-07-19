@@ -1,0 +1,17 @@
+<% include header %>
+<% include toolbar %>
+<form role="form" method="post" action="/element">
+    <div class="form-group">
+        <label for="name">Element name</label>
+        <input type="text" class="form-control" id="name" 
+               placeholder="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="score">Initial Score</label>
+        <input type="number" class="form-control" id="score" 
+               placeholder="score" name="score" required>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+<% include footer %>

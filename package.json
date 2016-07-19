@@ -4,6 +4,7 @@
   "description": "A simple leaderboard using Rocksdb, with a use case",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon app",
     "test": "nodemon test"
   },
   "keywords": [
@@ -18,6 +19,7 @@
     "ejs": "^2.4.2",
     "express": "^4.14.0",
     "level": "^1.4.0",
+    "leveldown": "^1.4.6",
     "morgan": "^1.7.0"
   },
   "devDependencies": {},

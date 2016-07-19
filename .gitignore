@@ -31,6 +31,7 @@ node_modules
 jspm_packages
 npm
 public/bower_components
+temp
 
 # Optional npm cache directory
 .npm
