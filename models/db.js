@@ -42,6 +42,17 @@
             });
         };
         
+        aux.delAll = function (cb) {
+            aux.db.createKeyStream().on('data', function (data) {
+                aux.db.del(data, function () {
+                    console.log('deleted ' + data);
+                });
+            }).on('end', function () {
+                console.log('Finished purge');
+                cb();
+            });
+        };
+        
         return aux;
     }
     

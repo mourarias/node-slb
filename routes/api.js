@@ -14,10 +14,12 @@
             submit = require('./submit')(db, realtime),
             del = require('./delete')(db, realtime),
             upd = require('./update')(db, realtime),
+            delAll = require('./delete-all')(db, realtime),
             list = require('./list')(db);
 
         api.use('/', submit);
         api.use('/', del);
+        api.use('/', delAll);
         api.use('/', upd);
         api.use('/', list);
         return api;
