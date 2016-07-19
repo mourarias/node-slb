@@ -11,8 +11,8 @@ A simple leaderboard using RocksDB for storage.
 - Update mechanism, like votes and such
 
 ### Objectives:
-- Highly configurable leaderboard
-- Realtime update
+- Highly configurable leaderboard (ETC - 20/07)
+- Realtime update (ETC - 20/07)
 - Filters
 - Other data processing
 - Expansible properties based in existing
