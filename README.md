@@ -4,15 +4,15 @@ A simple leaderboard using RocksDB for storage.
 
 ### Features(SO FAR):
 - Simple Leaderboard
-- Supports creation of (name, score) tuples (STILL HARDCODED)
+- Supports creation of (name, score) tuples (STILL HARDCODED, needs to be nonexistant)
 - Supports the deletion of elements
+- Update mechanism(Updates a rank or creates)
+- Realtime update(using [socket.io](https://socket.io))
 
 ### High priority:
-- Update mechanism, like votes and such
+- Highly configurable leaderboard (ETC - 20/07)
 
 ### Objectives:
-- Highly configurable leaderboard (ETC - 20/07)
-- Realtime update (ETC - 20/07)
 - Filters
 - Other data processing
 - Expansible properties based in existing
@@ -43,3 +43,14 @@ bower install
 cd ..
 npm start
 ``` 
+
+### Model
+- app
+    + pages
+    + api
+        - list
+        - delete
+        - submit
+        - update
+    + model(RocksDB, using level - a node js module)
+- realtime: socket.io for update

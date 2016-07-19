@@ -9,7 +9,7 @@
     function Submit(db, realtime) {
         var aux = express.Router();
         
-        aux.post('/submit', function (req, res) {
+        aux.post('/update', function (req, res) {
             var body = req.body,
                 name = body.name,
                 score = Number(body.score);
@@ -20,7 +20,7 @@
                 });
             }
             
-            db.create(name, score, function (err) {
+            db.put(name, score, function (err) {
                 if (err) {
                     return res.status(500).render('error', {
                         errorCode: 500

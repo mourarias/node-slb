@@ -6,7 +6,7 @@
 
     var express = require('express');
 
-    function Delete(db, socket) {
+    function Delete(db, realtime) {
         var del = express.Router();
 
         del.post('/delete', function (req, res) {
@@ -23,6 +23,7 @@
                         errorCode: 500
                     });
                 }
+                realtime.upd();
                 res.redirect('/');
             });
         });

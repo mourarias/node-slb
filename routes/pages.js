@@ -19,5 +19,9 @@
         res.render('delete');
     });
     
+    pages.get('/update', function (req, res) {
+        res.render('update');
+    });
+    
     module.exports = pages;
 }());

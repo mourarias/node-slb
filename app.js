@@ -10,7 +10,8 @@
         bodyParser = require('body-parser'),
         app = express(),
         public_path = path.resolve(__dirname, 'public'),
-        api = require('./routes/api'),
+        realtime = require('./routes/realtime')(),
+        api = require('./routes/api')(realtime),
         pages = require('./routes/pages');
     
     app.set('view engine', 'ejs');
@@ -27,7 +28,9 @@
         });
     });
     
-    app.listen(3000, function () {
-        console.log('slb running @ http://localhost:3000');
-    });
+    realtime.listen(
+        app.listen(3000, function () {
+            console.log('slb running @ http://localhost:3000');
+        })
+    );
 }());
