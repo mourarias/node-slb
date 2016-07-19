@@ -29,17 +29,14 @@
             aux.db.put(key, value, cb);
         };
         
-        aux['delete'] = function (key, cb) {
+        aux.del = function (key, cb) {
             aux.db.del(key, cb);
         };
         
         aux.getAll = function (cb) {
             var elems = [];
             aux.db.createReadStream().on('data', function (data) {
-                elems.push({
-                    name: data.key,
-                    score: data.value
-                });
+                elems.push(data);
             }).on('end', function () {
                 cb(elems);
             });

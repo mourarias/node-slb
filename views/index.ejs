@@ -1,20 +1,15 @@
 <% include header %>
     <% include toolbar %>
     
-    <table class="table table-hover">
-        <tr>
-            <th> Element </th>
-            <th> Score </th>
-        </tr>
-    <% elems.forEach(function (e) { %>
-        <tr>
-            <td>
-            <%= e.name %>
-            </td>
-            <td>
-            <%= e.score %>
-            </td>
-        </tr>
-    <% }); %>
+    <table class="table table-hover" id="leaderboard">
+        <thead>
+            <tr>
+                <th> Element </th>
+                <th> Score </th>
+            </tr>
+        </thead>
+        <tbody id="rank">
+        </tbody>
     </table>
+    <script type="text/javascript" src="js/main.js"></script>
 <% include footer %>
