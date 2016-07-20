@@ -9,10 +9,9 @@ A simple leaderboard using RocksDB for storage.
 - Update mechanism(Updates a rank or creates)
 - Realtime update(using [socket.io](https://socket.io))
 
-### High priority:
-- Highly configurable leaderboard (ETC - 20/07)
 
-### Objectives:
+### Objectives(For the future):
+- Highly configurable leaderboard 
 - Filters
 - Other data processing
 - Expansible properties based in existing
